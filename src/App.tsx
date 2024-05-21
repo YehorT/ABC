@@ -1,24 +1,42 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import {Typography, Badge, Popover, Checkbox} from 'antd';
+import { DownOutlined} from "@ant-design/icons";
+
+import {ResizedComp} from "./Resize";
+import styles from './App.module.css'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={styles.App}>
+        <div className={styles.filterPanel}>
+            <div className={styles.filterItem}>
+            <Typography.Text>Title</Typography.Text>
+            <Badge color={"#7D52CB"} count={1} />
+            <Popover
+                // visible={true}
+                placement={"bottom"}
+                // onVisibleChange={() => {}}
+                content={<>Content</>}
+                trigger={"click"}
+            >
+                <DownOutlined />
+            </Popover>
+            </div>
+            <div className={styles.filterItem}>
+                <Typography.Text>Title 2</Typography.Text>
+                <Badge color={"#7D52CB"} count={1} />
+                <Popover
+                    // visible={true}
+                    placement={"bottom"}
+                    // onVisibleChange={() => {}}
+                    content={<>Content</>}
+                    trigger={"click"}
+                >
+                    <DownOutlined />
+                </Popover>
+            </div>
+        </div>
+        <ResizedComp />
     </div>
   );
 }

@@ -1,5 +1,6 @@
 .App {
-  text-align: center;
+  padding: 20px;
+  width: auto;
 }
 
 .App-logo {
@@ -35,4 +36,27 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.filterPanel {
+  height: 56px;
+  background: white;
+  border: 1px solid grey;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  gap: 12px;
+}
+
+.filterItem {
+  height: 32px;
+  background: white;
+  border-radius: 100px;
+  border: 1px solid grey;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  gap: 8px;
 }
